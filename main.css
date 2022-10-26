@@ -30,7 +30,7 @@
 }
 p{
 	font-family: 'Quicksand', sans-serif;
-}
+	text-align: justify;}
 
 a{
 	font-family: 'Quicksand', sans-serif;
@@ -39,5 +39,8 @@ li{
 	font-family: 'Quicksand', sans-serif;
 }
 footer{
+	font-family: 'Quicksand', sans-serif;
+}
+h1{
 	font-family: 'Quicksand', sans-serif;
 }
