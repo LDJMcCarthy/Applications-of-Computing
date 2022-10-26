@@ -11,6 +11,7 @@
 .text {
   font-size: 20pt;
   font-weight: 300;
+<<<<<<< HEAD
   font-family: 'Quicksand', sans-serif;
 }
 .nav-item{
@@ -20,4 +21,7 @@
 .nav-item:hover{
   color: #aaa;
   font-family: 'Quicksand', sans-serif;
+}
+.footer{
+  font-size: 12pt;
 }
