@@ -24,3 +24,7 @@
 .footer{
   font-size: 12pt;
 }
+.boxed{
+	border-left-style: solid;
+	border-right-style: solid;
+}
