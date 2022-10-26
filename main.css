@@ -28,6 +28,9 @@
 	border-left-style: solid;
 	border-right-style: solid;
 }
+.active{
+	text-decoration: underline;
+}
 p{
 	font-family: 'Quicksand', sans-serif;
 	text-align: justify;}
@@ -43,4 +46,22 @@ footer{
 }
 h1{
 	font-family: 'Quicksand', sans-serif;
+}
+@media screen and (max-width: 600px) {
+	.col-4{
+		width: 100%;
+	}
+	.col-6{
+		width: 100%;
+	}
+	.title{
+		font-size: 8vw;	
+	}
+	.subtitle{
+		font-size: 6vw;
+	}
+	.text{
+		font-size: 2vw;
+	}
+	
 }
