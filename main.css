@@ -65,3 +65,16 @@ h1{
 	}
 	
 }
+
+.floating-container {
+  position: fixed;
+  text-align: center;
+  width: 70px;
+  height: 70px;
+  bottom: 0;
+  right: 0;
+  margin: 35px 25px;
+  background-color:black;
+  border-radius: 50%;
+  display: inline-block;
+}
