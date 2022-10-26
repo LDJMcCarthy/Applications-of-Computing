@@ -1,12 +1,23 @@
 .title {
   font-size: 30pt;
   font-weight: 550;
+  font-family: 'Quicksand', sans-serif;
 }
 .subtitle {
   font-size: 25pt;
   font-weight: 450;
+  font-family: 'Quicksand', sans-serif;
 }
 .text {
   font-size: 20pt;
   font-weight: 300;
+  font-family: 'Quicksand', sans-serif;
+}
+.nav-item{
+  color: #fff;
+  font-family: 'Quicksand', sans-serif;
+}
+.nav-item:hover{
+  color: #aaa;
+  font-family: 'Quicksand', sans-serif;
 }
