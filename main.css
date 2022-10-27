@@ -31,6 +31,9 @@
 .active{
 	text-decoration: underline;
 }
+nav{
+	border-style: solid;
+}
 p{
 	font-family: 'Quicksand', sans-serif;
 	text-align: justify;}
