@@ -69,8 +69,8 @@ h1{
 .floating-container {
   position: fixed;
   text-align: center;
-  width: 70px;
-  height: 70px;
+  aspect-ratio: 1/1;
+  width:5%;
   bottom: 0;
   right: 0;
   margin: 35px 25px;
@@ -86,5 +86,6 @@ h1{
   display: block;    
   margin-left: auto;
   margin-right: auto; 
-  padding-top: 10%
+  padding-top: 20%;
+  padding-bottom: 20%;
 }
