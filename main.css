@@ -68,20 +68,13 @@ h1{
 
 .floating-container {
   position: fixed;
-  text-align: center;
   aspect-ratio: 1/1;
+  min-width: 30pt;
+  max-width: 50pt;
   width:5%;
   bottom: 0;
   right: 0;
   margin: 35px 25px;
   background-color:black;
   border-radius: 50%;
-  display: inline-block;
-}
-
-.top-icon {
-  object-fit:fill;
-  min-width:60%;
-  min-height:60%;
-  padding-top: 20%;
 }
