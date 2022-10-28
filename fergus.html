@@ -1,13 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-color-scheme>
 
     <span class="floating-container">
       	<a class="w-100 h-100 d-flex" href="#top">
         	<div class="w-60 h-60 d-block mx-auto my-auto">
-          		<img class="img-fluid w-100 h-100" src="../assets/imgs/up.png" alt="Jump To Top">
+          		<img class="img-fluid w-100 h-100" src="assets/imgs/up.png" alt="Jump To Top">
         	</div>
       	</a>
     </span>
+
+  <!-- from https://github.com/vinorodrigues/bootstrap-dark-5/blob/main/docs/bootstrap-blackbox.md -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.3/dist/js/darkmode.min.js"></script>
 
 	<head>
 		<meta charset="utf-8">
@@ -17,33 +20,54 @@
 		<meta name="generator" content="Hugo 0.104.2">
 		<title>Application of Computing</title>
 		<link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/starter-template/">
-		<!-- Dark mode implementation from https://github.com/vinorodrigues/bootstrap-dark-5/blob/main/docs/bootstrap-dark.md -->
+		<!-- Dark mode implementation from https://github.com/vinorodrigues/bootstrap-dark-5/blob/main/docs/bootstrap-blackbox.md -->
     <meta name="color-scheme" content="light dark">
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.3/dist/css/bootstrap-dark.min.css" rel="stylesheet">
+		<link href="assets/dist/css/bootstrap-blackbox.css" rel="stylesheet">		
 
 		<!-- Custom styles for this template -->
-		<link href="../main.css" rel="stylesheet">
+		<link href="assets/dist/css/main.css" rel="stylesheet">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"> 
 	</head>
+
+	<!-- Init Darkmode -->
+	<script>
+		dark = localStorage.getItem("darkMode");
+		if (dark === null) {
+			localStorage.setItem("darkMode",darkmode.inDarkMode);
+		}
+		darkmode.setDarkMode(dark === "true");
+		
+	</script>
+
+
   <body>
   <a name="top"></a>
-	<header class="col-lg-8 mx-auto p-4 py-md-5 boxed">
-	<br>
-		<h1 class="title">Application of Computing</h1>
-		<p class="subtitle">Application of computing that make positive contributions to society</p>
-	</header>
+		<header class="col-lg-8 mx-auto p-4 py-md-5 boxed">
+			<br>
+			<div class="row">
+				<div class="col-8">
+					<h1 class="title">Application of Computing</h1>
+					<p class="subtitle">Application of computing that make positive contributions to society</p>
+				</div>
+				<div class="col align-self-end">
+					<button type="button" id="darkmode-button" class="btn footer float-end mb-4">
+						🌓Theme
+					</button>
+				</div>
+			</div>
+		</header>
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top nav-justified ">
 			<button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapsedNav">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="collapsedNav">
-				<a class="nav-item nav-link" href="../index.html">Home</a>
-				<a class="nav-item nav-link" href="../Liam/liam.html">Cloud Computing</a>
+				<a class="nav-item nav-link" href="index.html">Home</a>
+				<a class="nav-item nav-link" href="liam.html">Cloud Computing</a>
 				<a class="nav-item nav-link active" href="fergus.html">Surgical Complications</a>
-				<a class="nav-item nav-link" href="../Adam/adam.html">Olympic Tracking Systems</a>
-				<a class="nav-item nav-link" href="../reference.html">Reference Page</a>
+				<a class="nav-item nav-link" href="adam.html">Olympic Tracking Systems</a>
+				<a class="nav-item nav-link" href="reference.html">Reference Page</a>
 			</div>
 		</nav>
 
@@ -54,7 +78,7 @@
       </div>
       <div class="row">
         <div class="col">
-          <img class="img-fluid" src="src/dr-amin-madani.jpg" alt="Dr Amin Madani">
+          <img class="img-fluid" src="assets/imgs/dr-amin-madani.jpg" alt="Dr Amin Madani">
           <p class="my-1 footer text-muted">Dr. Amin Madani, a general surgeon with the Sprott Department of Surgery<br> at 
             University Health Network in Toronto (Paul Borkwood/CBC News)</p>
           <p class="subtitle">Background</p>
@@ -100,11 +124,11 @@
           </p>
           <div class="row justify-content-around pb-5">
             <div class="col-4">
-              <img style="object-fit:cover;max-width:100%;min-height:100%;" src="src/color-map.jpg",alt="Color map of safe area">
+              <img style="object-fit:cover;max-width:100%;min-height:100%;" src="assets/imgs/color-map.jpg",alt="Color map of safe area">
               <p class="footer text-muted text-center">Colored Style (<a href="https://www.cbc.ca/news/canada/toronto/toronto-doctor-ai-surgery-1.6293860">CBCNews</a>)</p>
             </div>
             <div class="col-4">
-              <img style="object-fit:cover;max-width:100%;min-height:100%;" src="src/heat-map.png",alt="Heat map of safe area">
+              <img style="object-fit:cover;max-width:100%;min-height:100%;" src="assets/imgs/heat-map.png",alt="Heat map of safe area">
               <p class="footer text-muted text-center">Heat-map Style (<a href="https://analyticsindiamag.com/toronto-doctor-developed-an-ai-to-reduce-surgical-complications/">Analytics India Magazine</a>)</p>
             </div>
           </div>
@@ -158,12 +182,17 @@
       <footer class="footer pt-5 my-5 text-muted border-top">
         Created by the Adam Johnstone, Fergus Lai, Liam McCarthy with Bootstrap &middot; &copy; 2022
       </footer>
-    </div>
-  </main>
+      </div>
+    </main>
 
 
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-      
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+		<!-- From https://github.com/vinorodrigues/bootstrap-dark-5/blob/main/docs/bootstrap-blackbox.md -->
+		<script>
+			document.querySelector("#darkmode-button").onclick = function(e){
+  			darkmode.toggleDarkMode();
+			  localStorage.setItem("darkMode",darkmode.inDarkMode);
+			}
+		</script>      
   </body>
 </html>
