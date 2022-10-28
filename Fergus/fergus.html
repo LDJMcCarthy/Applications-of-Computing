@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-color-scheme>
 
     <span class="floating-container">
       	<a class="w-100 h-100 d-flex" href="#top">
@@ -17,9 +17,9 @@
 		<meta name="generator" content="Hugo 0.104.2">
 		<title>Application of Computing</title>
 		<link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/starter-template/">
-		<!-- Dark mode implementation from https://github.com/vinorodrigues/bootstrap-dark-5/blob/main/docs/bootstrap-dark.md -->
+		<!-- Dark mode implementation from https://github.com/vinorodrigues/bootstrap-dark-5/blob/main/docs/bootstrap-blackbox.md -->
     <meta name="color-scheme" content="light dark">
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.3/dist/css/bootstrap-dark.min.css" rel="stylesheet">
+		<link href="../assets/dist/css/bootstrap-blackbox.css" rel="stylesheet">		
 
 		<!-- Custom styles for this template -->
 		<link href="../main.css" rel="stylesheet">
@@ -29,11 +29,20 @@
 	</head>
   <body>
   <a name="top"></a>
-	<header class="col-lg-8 mx-auto p-4 py-md-5 boxed">
-	<br>
-		<h1 class="title">Application of Computing</h1>
-		<p class="subtitle">Application of computing that make positive contributions to society</p>
-	</header>
+		<header class="col-lg-8 mx-auto p-4 py-md-5 boxed">
+			<br>
+			<div class="row">
+				<div class="col-8">
+					<h1 class="title">Application of Computing</h1>
+					<p class="subtitle">Application of computing that make positive contributions to society</p>
+				</div>
+				<div class="col align-self-end">
+					<button type="button" id="darkmode-button" class="btn footer float-end mb-4">
+						🌓Theme
+					</button>
+				</div>
+			</div>
+		</header>
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top nav-justified ">
 			<button class="navbar-toggler mx-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapsedNav">
 				<span class="navbar-toggler-icon"></span>
@@ -158,12 +167,17 @@
       <footer class="footer pt-5 my-5 text-muted border-top">
         Created by the Adam Johnstone, Fergus Lai, Liam McCarthy with Bootstrap &middot; &copy; 2022
       </footer>
-    </div>
-  </main>
+      </div>
+    </main>
 
 
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-      
+        <!-- From https://github.com/vinorodrigues/bootstrap-dark-5/blob/main/docs/bootstrap-blackbox.md -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-dark-5@1.1.3/dist/js/darkmode.min.js"></script>
+    <script>
+      document.querySelector("#darkmode-button").onclick = function(e){
+        darkmode.toggleDarkMode();
+      }
+    </script>  
   </body>
 </html>
