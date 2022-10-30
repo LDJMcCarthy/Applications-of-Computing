@@ -57,6 +57,12 @@ h1{
 	.col-6{
 		width: 100%;
 	}
+	.col-10{		
+		width: 100%;
+	}
+	.col-2{
+		width: 100;
+	}
 	.title{
 		font-size: 8vw;	
 	}
@@ -83,6 +89,8 @@ h1{
 }
 
 .author {
+	padding-top: 15px;
+	border-top: solid;
 	border-bottom: solid;
 	border-color: #000;
 }
