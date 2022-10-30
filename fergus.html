@@ -50,13 +50,13 @@
             <header class="col-lg-8 mx-auto p-4 py-md-5 boxed">
                 <br>
                 <div class="row align-items-end">
-                    <div class="col-10">
+                    <div class="col-9">
                         <h1 class="title">Application of Computing</h1>
                         <p class="subtitle">Application of computing that make positive contributions to society</p>
                     </div>
-                    <div class="col-2">
+                    <div class="col">
                         <div class="flex-row">
-                            <button type="button" id="darkmode-button" class="btn footer float-end mb-4">
+						    <button type="button" id="darkmode-button" class="btn footer float-end my-3 glow-on-hover">
                                 🌓Theme
                             </button>
                         </div>
@@ -82,7 +82,7 @@
                     <h1 class="subtitle">Using AI to Help Reduce Surgical Complications</h1>
                 </div>
                 <div class="row">
-                    <div class="col">
+                    <div class="col-6">
                         <p class="subtitle">Background</p>
                         <p class="Text">
                             According to the <a href="https://www.who.int/teams/integrated-health-services/patient-safety/research/safe-surgery">
@@ -112,7 +112,7 @@
                             <a href="https://journals.lww.com/annalsofsurgery/Citation/2022/08000/Artificial_Intelligence_for_Intraoperative.22.aspx">Annals of Surgery</a>.
                         </p>
                     </div>
-                    <div class="col align-self-center">
+                    <div class="col-6">
                         <img class="img-fluid d-block m-auto" src="assets/imgs/dr-amin-madani.jpg" alt="Dr Amin Madani">
                         <p class="my-1 footer text-muted">Dr. Amin Madani, a general surgeon with the Sprott Department of Surgery<br> at 
                             University Health Network in Toronto (Paul Borkwood/CBC News)</p>
@@ -215,9 +215,11 @@
     <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
         <!-- From https://github.com/vinorodrigues/bootstrap-dark-5/blob/main/docs/bootstrap-blackbox.md -->
         <script>
+			document.querySelector("#darkmode-button").style.background = darkmode.inDarkMode? "#fff" : "#000";
             document.querySelector("#author").style.borderColor = darkmode.inDarkMode? "#fff" : "#000";
             document.querySelector("#darkmode-button").onclick = function(e){
                 darkmode.toggleDarkMode();
+				document.querySelector("#darkmode-button").style.background = darkmode.inDarkMode? "#fff" : "#000";                
                 localStorage.setItem("darkMode",darkmode.inDarkMode);
                 document.querySelector("#author").style.borderColor = darkmode.inDarkMode? "#fff" : "#000";
             }

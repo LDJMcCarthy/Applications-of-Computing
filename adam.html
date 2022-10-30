@@ -31,73 +31,6 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"> 
-		
-
-
-		<style>
-			.glow-on-hover {
-				width: 220px;
-				height: 50px;
-				border: none;
-				outline: none;
-				color: #fff;
-				background: #111;
-				cursor: pointer;
-				position: relative;
-				z-index: 0;
-				border-radius: 10px;
-			}
-
-			.glow-on-hover:before {
-				content: '';
-				background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-				position: absolute;
-				top: -2px;
-				left:-2px;
-				background-size: 400%;
-				z-index: -1;
-				filter: blur(5px);
-				width: calc(100% + 4px);
-				height: calc(100% + 4px);
-				animation: glowing 20s linear infinite;
-				opacity: 0;
-				transition: opacity .3s ease-in-out;
-				border-radius: 10px;
-			}
-
-			.glow-on-hover:active {
-				color: #000
-			}
-
-			.glow-on-hover:active:after {
-				background: transparent;
-			}
-
-			.glow-on-hover:hover:before {
-				opacity: 1;
-			}
-
-			.glow-on-hover:after {
-				z-index: -1;
-				content: '';
-				position: absolute;
-				width: 100%;
-				height: 100%;
-				background: #111;
-				left: 0;
-				top: 0;
-				border-radius: 10px;
-			}
-
-			@keyframes glowing {
-				0% { background-position: 0 0; }
-				50% { background-position: 400% 0; }
-				100% { background-position: 0 0; }
-			}
-		</style>
-
-		
-
 	</head>
 	
 	<!-- Init Darkmode -->
@@ -116,13 +49,13 @@
 		<header class="col-lg-8 mx-auto p-4 py-md-5 boxed">
 			<br>
 			<div class="row align-items-end">
-				<div class="col-10">
+				<div class="col-9">
 					<h1 class="title">Application of Computing</h1>
 					<p class="subtitle">Application of computing that make positive contributions to society</p>
 				</div>
-				<div class="col-2">
+				<div class="col">
 					<div class="flex-row">
-						<button type="button" id="darkmode-button" class="btn footer float-end mb-4">
+						<button type="button" id="darkmode-button" class="btn footer float-end my-3 glow-on-hover">
 							🌓Theme
 						</button>
 					</div>
@@ -260,12 +193,14 @@
 		<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 		<!-- From https://github.com/vinorodrigues/bootstrap-dark-5/blob/main/docs/bootstrap-blackbox.md -->
         <script>
+			document.querySelector("#darkmode-button").style.background = darkmode.inDarkMode? "#fff" : "#000";
             document.querySelector("#author").style.borderColor = darkmode.inDarkMode? "#fff" : "#000";
             document.querySelector("#darkmode-button").onclick = function(e){
                 darkmode.toggleDarkMode();
+				document.querySelector("#darkmode-button").style.background = darkmode.inDarkMode? "#fff" : "#000";                
                 localStorage.setItem("darkMode",darkmode.inDarkMode);
                 document.querySelector("#author").style.borderColor = darkmode.inDarkMode? "#fff" : "#000";
             }
-        </script>     
+        </script>      
 	 </body>
 </html>
