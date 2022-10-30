@@ -50,8 +50,8 @@
 					<h1 class="title">Application of Computing</h1>
 					<p class="subtitle">Application of computing that make positive contributions to society</p>
 				</div>
-				<div class="col align-self-end">
-					<button type="button" id="darkmode-button" class="btn footer float-end mb-4">
+				<div class="col align-self-end text-right">
+					<button type="button" id="darkmode-button" class="btn footer float-end my-3 glow-on-hover">
 						🌓Theme
 					</button>
 				</div>
@@ -86,8 +86,10 @@
 
 		<!-- From https://github.com/vinorodrigues/bootstrap-dark-5/blob/main/docs/bootstrap-blackbox.md -->
 		<script>
+			document.querySelector("#darkmode-button").style.background = darkmode.inDarkMode? "#fff" : "#000";
 			document.querySelector("#darkmode-button").onclick = function(e){
   				darkmode.toggleDarkMode();
+				document.querySelector("#darkmode-button").style.background = darkmode.inDarkMode? "#fff" : "#000";
 				localStorage.setItem("darkMode",darkmode.inDarkMode);
 			}
 		</script>      
