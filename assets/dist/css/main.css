@@ -94,3 +94,18 @@ h1{
 	border-bottom: solid;
 	border-color: #000;
 }
+table{
+	border-style: solid;
+}
+td{
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+	padding-bottom: 0px;
+}
+th{
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+	padding-bottom: 0px;
+}
