@@ -135,11 +135,11 @@
                     </p>
                     <div class="row justify-content-around pb-5">
                         <div class="col-4">
-                        <img style="object-fit:cover;max-width:100%;min-height:100%;" src="assets/imgs/color-map.jpg",alt="Color map of safe area">
+                        <img style="object-fit:cover;max-width:100%;min-height:100%;" src="assets/imgs/color-map.jpg" alt="Color map of safe area">
                         <p class="footer text-muted text-center">Colored Style (<a href="https://www.cbc.ca/news/canada/toronto/toronto-doctor-ai-surgery-1.6293860">CBCNews</a>)</p>
                         </div>
                         <div class="col-4">
-                        <img style="object-fit:cover;max-width:100%;min-height:100%;" src="assets/imgs/heat-map.png",alt="Heat map of safe area">
+                        <img style="object-fit:cover;max-width:100%;min-height:100%;" src="assets/imgs/heat-map.png" alt="Heat map of safe area">
                         <p class="footer text-muted text-center">Heat-map Style (<a href="https://analyticsindiamag.com/toronto-doctor-developed-an-ai-to-reduce-surgical-complications/">Analytics India Magazine</a>)</p>
                         </div>
                     </div>
@@ -222,19 +222,21 @@
                 </footer>
             </div>
         </main>
-    </body>
 
-    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
         <!-- From https://github.com/vinorodrigues/bootstrap-dark-5/blob/main/docs/bootstrap-blackbox.md -->
         <script>
-			document.querySelector("#darkmode-button").style.background = darkmode.inDarkMode? "#fff" : "#000";
+            document.querySelector("#darkmode-button").style.background = darkmode.inDarkMode? "#fff" : "#000";
             document.querySelector("#author").style.borderColor = darkmode.inDarkMode? "#fff" : "#000";
             document.querySelector("#darkmode-button").onclick = function(e){
                 darkmode.toggleDarkMode();
-				document.querySelector("#darkmode-button").style.background = darkmode.inDarkMode? "#fff" : "#000";                
+                document.querySelector("#darkmode-button").style.background = darkmode.inDarkMode? "#fff" : "#000";                
                 localStorage.setItem("darkMode",darkmode.inDarkMode);
                 document.querySelector("#author").style.borderColor = darkmode.inDarkMode? "#fff" : "#000";
             }
         </script>      
+    </body>
+
+
 
 </html>
