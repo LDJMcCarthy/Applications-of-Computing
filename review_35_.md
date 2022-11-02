@@ -21,3 +21,4 @@
 - 64%
 - Two authors have significantly more contributions than the other
 - Commits continued until very recently before the practical.
+- Who's `BarrelBison12`? Collusion?
