@@ -24,15 +24,8 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-			<!-- Init Darkmode -->
-		<script>
-			dark = localStorage.getItem("darkMode");
-			if (dark === null) {
-				localStorage.setItem("darkMode",darkmode.inDarkMode);
-			}
-			darkmode.setDarkMode(dark === "true");
-			
-		</script>
+		<!-- Init Darkmode -->
+		<script src="assets/dist/js/darkmodeInit.js"></script>
 	</head>
 	
 
@@ -202,15 +195,6 @@
 		</div>
 		<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 		<!-- From https://github.com/vinorodrigues/bootstrap-dark-5/blob/main/docs/bootstrap-blackbox.md -->
-        <script>
-			document.querySelector("#darkmode-button").style.background = darkmode.inDarkMode? "#fff" : "#000";
-            document.querySelector("#author").style.borderColor = darkmode.inDarkMode? "#fff" : "#000";
-            document.querySelector("#darkmode-button").onclick = function(e){
-                darkmode.toggleDarkMode();
-				document.querySelector("#darkmode-button").style.background = darkmode.inDarkMode? "#fff" : "#000";                
-                localStorage.setItem("darkMode",darkmode.inDarkMode);
-                document.querySelector("#author").style.borderColor = darkmode.inDarkMode? "#fff" : "#000";
-            }
-        </script>      
+        <script src="assets/dist/js/darkmodeAuthorButton.js"></script>          
 	 </body>
 </html>
